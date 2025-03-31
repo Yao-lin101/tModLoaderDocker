@@ -2,10 +2,13 @@ maxplayers=8
 port=7777
 password=hasaki
 motd=Welcome to tModLoader server!
-worldname=MyTModWorld
-difficulty=1
-autocreate=1
-worldpath=/home/tml/.local/share/Terraria/tModLoader/Worlds
-banlist=banlist.txt
-language=zh/Hans
-priority=1
+# 如果要使用已有的世界文件，取消注释下面的world配置并设置正确的路径
+world=/home/tml/.local/share/Terraria/tModLoader/Worlds/顺其大厦13代.wld
+# 如果要创建新世界，使用以下配置
+#worldname=MyTModWorld
+#difficulty=1
+#autocreate=1
+#worldpath=/home/tml/.local/share/Terraria/tModLoader/Worlds
+#banlist=banlist.txt
+#language=zh/Hans
+#priority=1
