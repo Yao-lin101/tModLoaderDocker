@@ -28,16 +28,15 @@ WORKDIR $HOME
 # Update SteamCMD and verify latest version
 RUN steamcmd +quit
 
-# ADD --chown=tml:tml https://raw.githubusercontent.com/tModLoader/tModLoader/1.4.4/patches/tModLoader/Terraria/release_extras/DedicatedServerUtils/manage-tModLoaderServer.sh .
-
-# If you need to make local edits to the management script copy it to the same
-# directory as this file, comment out the above line and uncomment this line:
+# Copy local files
 COPY --chown=tml:tml manage-tModLoaderServer.sh .
+COPY --chown=tml:tml tModLoader.zip .
 
-# Make management script executable. Fixes "Permission Denied" error on some systems.
+# Make management script executable
 RUN chmod +x manage-tModLoaderServer.sh
 
-RUN ./manage-tModLoaderServer.sh install-tml --github --tml-version $TML_VERSION
+# Extract tModLoader.zip and move files
+RUN unzip tModLoader.zip -d server/ && rm tModLoader.zip
 
 EXPOSE 7777
 

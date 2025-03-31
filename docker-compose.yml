@@ -3,17 +3,15 @@ version: "3.0"
 services:
   tml:
     container_name: tml
-    #restart: unless-stopped
+    restart: unless-stopped
     build:
       context: .
       args:
-        UID: 1000
-        GID: 1000
-        #TML_VERSION: v2023.8.3.3
-    #entrypoint: [ "/bin/bash" ] # Uncomment this line if you need to poke around in the container
+        UID: 1003
+        GID: 1003
     tty: true
     stdin_open: true
     ports:
       - 7777:7777
     volumes:
-      - ./tModLoader:/home/tml/.local/share/Terraria/tModLoader
+      - ./data:/home/tml/.local/share/Terraria/tModLoader
