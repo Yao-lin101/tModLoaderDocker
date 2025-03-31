@@ -1,0 +1,23 @@
+# 压缩文件
+*.zip
+*.tar.gz
+
+# 游戏数据和日志
+server/
+Mods/
+Worlds/
+logs/
+
+# 系统和临时文件
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Steam相关文件
+steam_appid.txt
+
+# 其他可能的临时文件
+*.tmp
+*.bak
+*.log

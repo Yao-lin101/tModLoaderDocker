@@ -1,0 +1,11 @@
+maxplayers=8
+port=7777
+password=hasaki
+motd=Welcome to tModLoader server!
+worldname=MyTModWorld
+difficulty=1
+autocreate=1
+worldpath=/home/tml/.local/share/Terraria/tModLoader/Worlds
+banlist=banlist.txt
+language=zh/Hans
+priority=1
